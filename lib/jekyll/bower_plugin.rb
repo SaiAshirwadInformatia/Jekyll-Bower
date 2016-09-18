@@ -1,5 +1,5 @@
 
-module JekyllPlugins
+module Jekyll
 	class Bower
 		def initialize()
 			print "Checking if NPM is available\n"
@@ -11,6 +11,8 @@ module JekyllPlugins
 				print "Installing bower\n"
 				system('npm install -g bower')
 				print "Installation completed\n"
+			else
+				print "Great, Bower is available\n"
 			end
 			print "Resolving dependencies with bower\n"
 			system('bower install')
